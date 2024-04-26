@@ -1,7 +1,7 @@
 {
   "name": "vue_library_demo",
   "private": "true",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "lcapIdeVersion": "3.8",
   "title": "前端依赖库Demo(Vue2)",
   "description": "前端依赖库Demo(Vue2)",
@@ -28,9 +28,8 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "@lcap/builder": "^1.1.0-beta.5",
+    "@lcap/builder": "1.1.0-beta.22",
     "@lcap/storybook-vue-vite": "^7.6.17",
     "@lcap/vite-plugin-vue2": "^1.0.0",
     "@nasl/types": "^0.1.6",
