@@ -2,10 +2,10 @@ Plugin-Version: 1.0.0
 Library-Type: Frontend
 Metadata-File: nasl.extension.json
 Tag: Vue
-packages/extension/vue_library_demo@1.0.1/dist-theme/index.cjs: dist-theme/index.cjs
-packages/extension/vue_library_demo@1.0.1/dist-theme/index.css: dist-theme/index.css
-packages/extension/vue_library_demo@1.0.1/dist-theme/index.js: dist-theme/index.js
-packages/extension/vue_library_demo@1.0.1/dist-theme/index.mjs: dist-theme/index.mjs
-packages/extension/vue_library_demo@1.0.1/nasl.extension.d.ts: nasl.extension.d.ts
-packages/extension/vue_library_demo@1.0.1/manifest: manifest
-packages/extension/vue_library_demo@1.0.1/zip.tgz: zip.tgz
+packages/extension/vue_library_demo@1.0.2/dist-theme/index.cjs: dist-theme/index.cjs
+packages/extension/vue_library_demo@1.0.2/dist-theme/index.css: dist-theme/index.css
+packages/extension/vue_library_demo@1.0.2/dist-theme/index.js: dist-theme/index.js
+packages/extension/vue_library_demo@1.0.2/dist-theme/index.mjs: dist-theme/index.mjs
+packages/extension/vue_library_demo@1.0.2/nasl.extension.d.ts: nasl.extension.d.ts
+packages/extension/vue_library_demo@1.0.2/manifest: manifest
+packages/extension/vue_library_demo@1.0.2/zip.tgz: zip.tgz

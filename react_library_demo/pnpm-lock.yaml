@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@lcap/builder':
-    specifier: 1.1.0-beta.22
-    version: 1.1.0-beta.22(typescript@5.4.5)(vite@5.2.10)
+    specifier: 1.1.0-beta.23
+    version: 1.1.0-beta.23(typescript@5.4.5)(vite@5.2.10)
   '@nasl/types':
     specifier: ^0.1.6
     version: 0.1.6
@@ -2028,8 +2028,8 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@lcap/builder@1.1.0-beta.22(typescript@5.4.5)(vite@5.2.10):
-    resolution: {integrity: sha512-ZUr5UZAiadZnMDYCRtRROyuvHfJeV76kuvpRNzKXr2OQKQ+Z1nY23pdMy8cKlXA6IMUPUZMG0ATqjZpt8anmBA==}
+  /@lcap/builder@1.1.0-beta.23(typescript@5.4.5)(vite@5.2.10):
+    resolution: {integrity: sha512-YswFCJUB+QvofoB03YjS6k2VV11e1MIFkykr9wm2vew75blhm4BXIHh8y0SQCFPJz/GGUMSqhHK5lrF0Q7pQdA==}
     engines: {node: '>=18.17.0', npm: '>=9.6.0'}
     hasBin: true
     peerDependencies:
