@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@lcap/builder':
-    specifier: 1.1.0-beta.23
-    version: 1.1.0-beta.23(typescript@5.4.5)(vite@5.2.10)
+    specifier: 1.1.0-beta.24
+    version: 1.1.0-beta.24(typescript@5.4.5)(vite@5.2.10)
   '@lcap/storybook-vue-vite':
     specifier: ^7.6.17
     version: 7.6.17(@babel/core@7.24.4)(css-loader@7.1.1)(typescript@5.4.5)(vite@5.2.10)(vue@2.6.12)
@@ -2053,8 +2053,8 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@lcap/builder@1.1.0-beta.23(typescript@5.4.5)(vite@5.2.10):
-    resolution: {integrity: sha512-YswFCJUB+QvofoB03YjS6k2VV11e1MIFkykr9wm2vew75blhm4BXIHh8y0SQCFPJz/GGUMSqhHK5lrF0Q7pQdA==}
+  /@lcap/builder@1.1.0-beta.24(typescript@5.4.5)(vite@5.2.10):
+    resolution: {integrity: sha512-2N9CabCEocXFipCW/fnroHXhJWlpvo7AHyfnE8n+i9A9+BS5oVdHKCWCOdVNntP+mARx8R/QxNzzaVg1IiUt7Q==}
     engines: {node: '>=18.17.0', npm: '>=9.6.0'}
     hasBin: true
     peerDependencies:
