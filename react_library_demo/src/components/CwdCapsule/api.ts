@@ -11,15 +11,37 @@ namespace extensions.react_library_demo.viewComponents {
   @Component({
     title: '胶囊选择器',
     description: '胶囊选择器',
-    group: 'Form',
   })
-  export class CwdCapsule extends ViewComponent {
-    constructor(options?: Partial<CwdCapsuleOptions>) {
+  export class CwdCapsule<T, V> extends ViewComponent {
+    constructor(options?: Partial<CwdCapsuleOptions<T, V>>) {
       super();
     }
+
+    @Method({
+      title: '测试调用',
+      description: '测试调用'
+    })
+    testCall(): void {}
   }
 
-  export class CwdCapsuleOptions extends ViewComponentOptions {
+  export class CwdCapsuleOptions<T, V> extends ViewComponentOptions {
+    @Prop({
+      group: '数据属性',
+      title: '数据源',
+      description: '数据源测试',
+    })
+    dataSource: nasl.collection.List<T>;
+
+    @Prop({
+      group: '数据属性',
+      title: '文本字段',
+      description: '选项文本的字段名',
+      setter: {
+        concept: "PropertySelectSetter"
+      }
+    })
+    textField: (item: T) => any;
+
     @Prop({
       title: '数据',
       description: '数据源，如：[{ label: \'月销售统计\', value: \'month\' }]',

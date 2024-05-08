@@ -2,10 +2,10 @@ Plugin-Version: 1.0.0
 Library-Type: Frontend
 Metadata-File: nasl.extension.json
 Tag: React
-packages/extension/react_library_demo@1.0.2/dist-theme/index.cjs: dist-theme/index.cjs
-packages/extension/react_library_demo@1.0.2/dist-theme/index.css: dist-theme/index.css
-packages/extension/react_library_demo@1.0.2/dist-theme/index.js: dist-theme/index.js
-packages/extension/react_library_demo@1.0.2/dist-theme/index.mjs: dist-theme/index.mjs
-packages/extension/react_library_demo@1.0.2/nasl.extension.d.ts: nasl.extension.d.ts
-packages/extension/react_library_demo@1.0.2/manifest: manifest
-packages/extension/react_library_demo@1.0.2/zip.tgz: zip.tgz
+packages/extension/react_library_demo@1.0.3/dist-theme/index.cjs: dist-theme/index.cjs
+packages/extension/react_library_demo@1.0.3/dist-theme/index.css: dist-theme/index.css
+packages/extension/react_library_demo@1.0.3/dist-theme/index.js: dist-theme/index.js
+packages/extension/react_library_demo@1.0.3/dist-theme/index.mjs: dist-theme/index.mjs
+packages/extension/react_library_demo@1.0.3/nasl.extension.d.ts: nasl.extension.d.ts
+packages/extension/react_library_demo@1.0.3/manifest: manifest
+packages/extension/react_library_demo@1.0.3/zip.tgz: zip.tgz

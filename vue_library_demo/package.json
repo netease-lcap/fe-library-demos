@@ -1,7 +1,7 @@
 {
   "name": "vue_library_demo",
   "private": "true",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "lcapIdeVersion": "3.8",
   "title": "前端依赖库Demo(Vue2)",
   "description": "前端依赖库Demo(Vue2)",
