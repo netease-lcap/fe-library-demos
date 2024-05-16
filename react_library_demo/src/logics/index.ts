@@ -51,3 +51,18 @@ export function parseString2Moment(str: nasl.core.String = '2024-12-12'): { date
     timeOfDay: 23,
   };
 }
+
+/**
+ * @NaslLogic
+ * @title 测试回调函数默认值
+ * @desc 测试回调函数默认值
+ * @param str 弹出文字
+ * @returns
+ */
+export async function testCallBack(str: nasl.core.String, callback?: (param: nasl.core.String) => Promise<void>): Promise<void> {
+  alert(str);
+
+  if (callback) {
+    callback();
+  }
+}

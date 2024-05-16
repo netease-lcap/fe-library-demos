@@ -1,7 +1,7 @@
 import Component from '../index';
 
 export default {
-  id: 'cwd-capsule-blocks',
+  // id: 'cwdCapsuleBlocks',
   title: '组件列表/CwdCapsule/内置区块',
   component: Component,
   parameters: {
@@ -12,6 +12,21 @@ export default {
 
 export const Default = {
   name: '基本用法',
+  render: () => ({
+    template: '<cwd-capsule></cwd-capsule>',
+  }),
+};
+
+
+export const Demo = {
+  name: '测试多个1',
+  render: () => ({
+    template: '<cwd-capsule></cwd-capsule>',
+  }),
+};
+
+export const Build = {
+  name: '测试多个2',
   render: () => ({
     template: '<cwd-capsule></cwd-capsule>',
   }),

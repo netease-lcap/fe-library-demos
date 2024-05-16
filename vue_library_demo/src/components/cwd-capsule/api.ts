@@ -73,4 +73,42 @@ namespace extensions.vue_library_demo.viewComponents {
     })
     onChange: (event: nasl.core.String) => void;
   }
+
+  @Component({
+    title: '胶囊选择器选项',
+    description: '胶囊选择器选项',
+  })
+  export class CwdCapsuleItem extends ViewComponent {
+    constructor(options?: Partial<CwdCapsuleItemOptions>) {
+      super();
+    }
+
+    @Method({
+      title: '测试调用',
+      description: '测试调用'
+    })
+    testCall(): void {}
+  }
+
+  export class CwdCapsuleItemOptions extends ViewComponentOptions {
+    @Prop({
+      group: '主要属性',
+      title: '显示文本',
+      description: '数据源测试',
+      setter: {
+        concept: 'InputSetter'
+      }
+    })
+    text: nasl.core.String;
+
+    @Prop({
+      group: '主要属性',
+      title: '值',
+      description: '值',
+      setter: {
+        concept: 'InputSetter'
+      }
+    })
+    value: nasl.core.String;
+  }
 }
