@@ -1,7 +1,7 @@
 {
   "name": "vue_library_demo",
   "private": "true",
-  "version": "1.0.7",
+  "version": "1.0.12",
   "lcapIdeVersion": "3.8",
   "title": "前端依赖库Demo(Vue2)",
   "description": "前端依赖库Demo(Vue2)",
@@ -29,7 +29,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@lcap/builder": "^1.1.3",
+    "@lcap/builder": "^1.2.0-beta.8",
     "@lcap/storybook-vue-vite": "^7.6.17",
     "@lcap/vite-plugin-vue2": "^1.0.0",
     "@nasl/types": "^0.1.6",
@@ -48,6 +48,7 @@
     "jest-serializer-vue-tjw": "^3.20.0",
     "jsdom": "^23.0.1",
     "marked": "^12.0.1",
+    "puppeteer": "^22.9.0",
     "rimraf": "^5.0.5",
     "storybook": "^7.6.17",
     "typescript": "^5.3.3",
@@ -61,5 +62,8 @@
   },
   "peerDependencies": {
     "vue": "^2.6.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

@@ -25,6 +25,7 @@ export default defineConfig(({ command }) => {
       lcapPlugin({
         type: 'extension',
         framework: 'vue2',
+        i18n: true,
       }),
     ],
     resolve: {

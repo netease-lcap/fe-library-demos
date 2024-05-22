@@ -21,7 +21,7 @@ export const Default = {
 export const Demo = {
   name: '测试多个1',
   render: () => ({
-    template: '<cwd-capsule></cwd-capsule>',
+    template: '<cwd-capsule value="year"></cwd-capsule>',
   }),
 };
 
