@@ -19,9 +19,9 @@ export const Default = {
 
 
 export const Demo = {
-  name: '测试多个1',
+  name: '使用slot',
   render: () => ({
-    template: '<cwd-capsule value="year"></cwd-capsule>',
+    template: '<cwd-capsule value="year"><template #item="current"><u-text :text="current.item.label"></u-text></template></cwd-capsule>',
   }),
 };
 

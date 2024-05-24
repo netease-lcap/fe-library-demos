@@ -2,8 +2,9 @@
   <div :class="[$style.capsuleBox, 'cwd-capsule']">
     <div :class="$style.capsule">
       <div v-for="item in list" :class="{ [$style.item]: true, [$style.active]: getProp(item, valueField) === currentValue }"
-        :key="item.value" @click="handleItemClick(item)">
-        {{ getProp(item, textField) }}
+        :key="item.value" @click="handleItemClick(item)" vusion-slot-name="item">
+        <slot name="item" :item="item"></slot>
+        <s-empty v-if="(!$scopedSlots.item || !$scopedSlots.item({ item })) && $env && $env.VUE_APP_DESIGNER" />
       </div>
     </div>
   </div>
@@ -70,7 +71,7 @@ export default {
     },
     async loadListForDataSource() {
       if (typeof this.dataSource === 'function') {
-        const data = await this.dataSource({ value: this.currentValue });
+        const data = await this.dataSource({ value: this.currentValue, page: 1, size: 10 });
         this.list = this.normalizeData(data);
       } else {
         this.list = this.normalizeData(this.dataSource);

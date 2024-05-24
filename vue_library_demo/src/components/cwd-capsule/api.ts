@@ -21,6 +21,18 @@ namespace extensions.vue_library_demo.viewComponents {
     })
     value: V;
 
+    @Prop({
+      title: '分页',
+      description: '',
+    })
+    page: nasl.core.Integer;
+
+    @Prop({
+      title: '页数大小',
+      description: '',
+    })
+    size: nasl.core.Integer;
+
     @Method({
       title: '测试调用',
       description: '测试调用'
@@ -33,7 +45,7 @@ namespace extensions.vue_library_demo.viewComponents {
       group: '数据属性',
       title: '数据源',
       description: '数据源测试',
-      designerValue: [{ label: "月销售统计", value: "month"},{ label: "年销售统计", value: "year"}],
+      designerValue: [{},{},{}],
     })
     dataSource: nasl.collection.List<T> | { list: nasl.collection.List<T>, total: number };
 
@@ -86,6 +98,14 @@ namespace extensions.vue_library_demo.viewComponents {
       }
     })
     testIcon: nasl.core.String;
+
+    @Slot({
+      title: '项',
+      description: '每一项内容'
+    })
+    slotItem: (current: {
+      item: T,
+    }) => void;
 
     @Event({
       title: '值改变',
