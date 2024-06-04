@@ -23,15 +23,6 @@ export const filterProperty = (key) => (property: naslTypes.EntityProperty) => {
 export const firstUpperCase = (value) => value.replace(/^\S/, (letter) => letter.toUpperCase());
 export const firstLowerCase = (value) => value.replace(/^\S/, (letter) => letter.toLowerCase());
 
-export function transEntityMetadataTypes(typeAnnotation: naslTypes.TypeAnnotation, app: naslTypes.App) {
-  let { typeName: propertyTypeName } = typeAnnotation || {};
-  if (typeAnnotation?.typeNamespace?.endsWith('.metadataTypes')) {
-    const referenceNode = app.findNodeByCompleteName(`${typeAnnotation.typeNamespace}.${typeAnnotation.typeName}`) || {};
-    const { typeName } = referenceNode.typeAnnotation || {};
-    propertyTypeName = typeName;
-  }
-  return propertyTypeName;
-}
 
 export function getFirstDisplayedProperty(entity: naslTypes.Entity) {
   let property = entity.properties.find((property1) => !property1.readonly);
