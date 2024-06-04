@@ -1,0 +1,16 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@nasl/ast-mini':
+    specifier: 3.9.0-beta
+    version: 3.9.0-beta
+
+packages:
+
+  /@nasl/ast-mini@3.9.0-beta:
+    resolution: {integrity: sha512-eBD/grpras0/w3N/xVCWpArZQTP/NKfA58hPHx00zir5j3vdMarkFYiAM7BaAcpf4o0ys6uIJhOpni/rtbg6Mg==}
+    dev: false
