@@ -93,8 +93,8 @@ namespace extensions.vue_library_demo.viewComponents {
       description: '测试图标展示',
       setter: {
         concept: 'IconSetter',
-        useCustomIconFont: 'toolbox-custom-icons',
-		    disableOnlySvg: true,
+        // useCustomIconFont: 'toolbox-custom-icons',
+		    // disableOnlySvg: true,
       }
     })
     testIcon: nasl.core.String;
