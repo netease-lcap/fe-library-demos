@@ -4,6 +4,7 @@ import {
     firstLowerCase,
     NameGroup,
     genUniqueQueryNameGroup,
+    getFirstDisplayedProperty,
 } from './utils';
 
 function genGetTemplate(entity: naslTypes.Entity, nameGroup: NameGroup) {
@@ -51,8 +52,15 @@ function genQueryLogic(entity: naslTypes.Entity, nameGroup: NameGroup) {
 
 
 function genCwdCapsuleTemplate(entity: naslTypes.Entity, nameGroup: NameGroup) {
-    const dataSourceValue = `app.logics.${nameGroup.logic}()`
-    return `<CwdCapsule dataSource={${dataSourceValue}}></CwdCapsule>`;
+    const dataSourceValue = `app.logics.${nameGroup.logic}()`;
+    const displayedProperty = getFirstDisplayedProperty(entity);
+    const lowerEntityName = firstLowerCase(entity.name);
+  let valueExpression = `current.item.${lowerEntityName}.${displayedProperty.name}`;
+    return `<CwdCapsule dataSource={${dataSourceValue}}
+        slotItem={
+            (current) => <UText text={${valueExpression}}></UText>
+        }
+    ></CwdCapsule>`;
 }
 
 export function genGetBlock(entity: naslTypes.Entity, refElement: naslTypes.ViewElement) {
