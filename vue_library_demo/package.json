@@ -29,7 +29,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@lcap/builder": "^1.2.0-beta.8",
+    "@lcap/builder": "^1.2.0-beta.9",
     "@lcap/storybook-vue-vite": "^7.6.17",
     "@lcap/vite-plugin-vue2": "^1.0.0",
     "@nasl/types": "^0.1.6",
