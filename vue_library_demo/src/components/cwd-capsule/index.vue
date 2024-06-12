@@ -3,10 +3,13 @@
     <div :class="$style.capsule">
       <div v-for="item in list" :class="{ [$style.item]: true, [$style.active]: getProp(item, valueField) === currentValue }"
         :key="item.value" @click="handleItemClick(item)" vusion-slot-name="item">
-        <slot name="item" :item="item"></slot>
+        <slot name="item" :item="item">
+          {{ getLabel(item) }}
+        </slot>
         <s-empty v-if="(!$scopedSlots.item || !$scopedSlots.item({ item })) && $env && $env.VUE_APP_DESIGNER" />
       </div>
     </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -88,6 +91,9 @@ export default {
         item,
       });    //抛出事件
       this.$emit("update:value", this.currentValue);   //设置了IDE属性sync: true后添加
+    },
+    getLabel(item) {
+      return at(item, this.textField)[0];
     }
   }
 };

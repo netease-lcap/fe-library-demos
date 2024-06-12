@@ -1,6 +1,6 @@
 /// <reference types="@nasl/types" />
 namespace extensions.vue_library_demo.viewComponents {
-  const { Component, Prop, ViewComponent, Slot, Method, Event, ViewComponentOptions } = nasl.ui;
+  const { Component, Prop, ViewComponent, Slot, Method, Event, ViewComponentOptions } = nasl.ui as any;
 
   @ExtensionComponent({
     type: 'pc',
@@ -93,8 +93,8 @@ namespace extensions.vue_library_demo.viewComponents {
       description: '测试图标展示',
       setter: {
         concept: 'IconSetter',
-        // useCustomIconFont: 'toolbox-custom-icons',
-		    // disableOnlySvg: true,
+        useCustomIconFont: 'toolbox-custom-icons',
+		    disableOnlySvg: true,
       }
     })
     testIcon: nasl.core.String;
@@ -105,7 +105,17 @@ namespace extensions.vue_library_demo.viewComponents {
     })
     slotItem: (current: {
       item: T,
-    }) => void;
+    }) => nasl.collection.List<nasl.ui.ViewComponent>;
+
+    @Slot({
+      title: '默认',
+      description: '默认内容',
+      snippets: [{
+        title: '子组件',
+        code: '<cwd-capsule-item text="没啥用的子组件"></cwd-capsule-item>'
+      }]
+    })
+    slotDefault: () => nasl.collection.List<nasl.ui.ViewComponent>;
 
     @Event({
       title: '值改变',
@@ -115,5 +125,26 @@ namespace extensions.vue_library_demo.viewComponents {
       value: V,
       item: T,
     }) => void;
+  }
+
+  @Component({
+    title: '胶囊子组件',
+    description: '胶囊子组件',
+  })
+  export class CwdCapsuleItem extends ViewComponent {
+    constructor(options?: Partial<CwdCapsuleItemOptions>) {
+      super();
+    }
+  }
+
+  export class CwdCapsuleItemOptions extends ViewComponentOptions {
+    @Prop({
+      title: '文本',
+      description: '显示文本',
+      setter: {
+        concept: 'InputSetter'
+      }
+    })
+    text: nasl.core.String;
   }
 }
