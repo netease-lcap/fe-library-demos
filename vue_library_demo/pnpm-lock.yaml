@@ -22,8 +22,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(ejs@3.1.10)(handlebars@4.7.8)(lodash@4.17.21)(pug@3.0.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.16.4)(vite@5.2.10(@types/node@20.12.7))(vue-template-compiler@2.6.12)(vue@2.6.12)
       '@nasl/types':
-        specifier: ^0.1.6
-        version: 0.1.6
+        specifier: ^0.1.8-beta
+        version: 0.1.8-beta
       '@storybook/addon-essentials':
         specifier: ^7.6.17
         version: 7.6.18(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -1164,8 +1164,8 @@ packages:
     peerDependencies:
       react: '>=16'
 
-  '@nasl/types@0.1.6':
-    resolution: {integrity: sha512-h6Yh57U1jEbvgWh8A1XxsWAW61JLjshq35sT1G57qZ3D6539v2hxEUe8TjOL0c501lz7gCm4WLlowf/wgypBRA==}
+  '@nasl/types@0.1.8-beta':
+    resolution: {integrity: sha512-hzxlbnI4VEjtIMJPV95JiTRE2GPDEBvNJbUL2kUPc8jk9app6JHYX5NWKYAPX93tHoFmuY7hQuCK7AqwlBkffg==}
 
   '@ndelangen/get-tarball@3.0.9':
     resolution: {integrity: sha512-9JKTEik4vq+yGosHYhZ1tiH/3WpUS0Nh0kej4Agndhox8pAdWhEx5knFVRcb/ya9knCRCs1rPxNrSXTDdfVqpA==}
@@ -6846,7 +6846,7 @@ snapshots:
       '@types/react': 18.2.79
       react: 18.2.0
 
-  '@nasl/types@0.1.6': {}
+  '@nasl/types@0.1.8-beta': {}
 
   '@ndelangen/get-tarball@3.0.9':
     dependencies:

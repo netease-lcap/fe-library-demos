@@ -1,6 +1,6 @@
 /// <reference types="@nasl/types" />
 namespace extensions.vue_library_demo.viewComponents {
-  const { Component, Prop, ViewComponent, Slot, Method, Event, ViewComponentOptions } = nasl.ui as any;
+  const { Component, Prop, ViewComponent, Slot, Method, Event, ViewComponentOptions } = nasl.ui;
 
   @ExtensionComponent({
     type: 'pc',
@@ -93,8 +93,8 @@ namespace extensions.vue_library_demo.viewComponents {
       description: '测试图标展示',
       setter: {
         concept: 'IconSetter',
-        useCustomIconFont: 'toolbox-custom-icons',
-		    disableOnlySvg: true,
+        customIconFont: 'toolbox-custom-icons',
+		    hideUploadIcon: true,
       }
     })
     testIcon: nasl.core.String;
