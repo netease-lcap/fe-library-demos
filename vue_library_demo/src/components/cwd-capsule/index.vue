@@ -61,6 +61,15 @@ export default {
     getProp(item, propName) {
       return at(item, propName)[0];
     },
+    syncState(state) {
+      if (!state) {
+        return;
+      }
+
+      Object.keys(state).forEach((k) => {
+        this.$emit('sync:state', k, state[k]);
+      });
+    },
     normalizeData(data) {
       if (Array.isArray(data)) {
         return data;
@@ -74,7 +83,9 @@ export default {
     },
     async loadListForDataSource() {
       if (typeof this.dataSource === 'function') {
-        const data = await this.dataSource({ value: this.currentValue, page: 1, size: 10 });
+        const params = { value: this.currentValue, page: 1, size: 10 };
+        this.syncState(params);
+        const data = await this.dataSource(params);
         this.list = this.normalizeData(data);
       } else {
         this.list = this.normalizeData(this.dataSource);
