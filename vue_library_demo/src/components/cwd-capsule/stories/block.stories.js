@@ -21,13 +21,13 @@ export const Default = {
 export const Demo = {
   name: '使用slot',
   render: () => ({
-    template: '<cwd-capsule value="year"><template #item="current"><u-text :text="current.item.label"></u-text></template></cwd-capsule>',
+    template: '<cwd-capsule value="year"><template #item="current"><u-text :text="`使用 Slot ${current.item.label}`"></u-text></template></cwd-capsule>',
   }),
 };
 
 export const Build = {
-  name: '测试多个2',
+  name: '展示Icon',
   render: () => ({
-    template: '<cwd-capsule></cwd-capsule>',
+    template: '<cwd-capsule value="year" testIcon="xinxi_info"></cwd-capsule>',
   }),
 };
