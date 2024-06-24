@@ -1,5 +1,10 @@
 <template>
   <div :class="[$style.capsuleBox, 'cwd-capsule']">
+    <i v-if="testIcon" style="font-size:20px; line-height: 1; display: inline-flex;margin-right: 4px;">
+      <svg :class="$style.iconsvg" aria-hidden="true">
+        <use :xlink:href="`#cus-toolbox-${testIcon}`" />
+      </svg>
+    </i>
     <div :class="$style.capsule">
       <div v-for="item in list" :class="{ [$style.item]: true, [$style.active]: getProp(item, valueField) === currentValue }"
         :key="item.value" @click="handleItemClick(item)" vusion-slot-name="item">
@@ -14,6 +19,7 @@
 </template>
 
 <script>
+import '../../../ide/icons/icon-font.js';
 import { at } from 'lodash';
 export default {
   name: "cwd-capsule",
@@ -33,6 +39,9 @@ export default {
     value: {
       type: [String, Number],
     },
+    testIcon: {
+      type: String,
+    }
   },
   data() {
     return {
@@ -112,6 +121,8 @@ export default {
 
 <style module>
 .capsuleBox {
+  display: inline-flex;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -135,6 +146,14 @@ export default {
   transition: ease 200ms;
   font-size: var(--cwd-capsule-font-size);
   line-height: 1.5;
+}
+
+.iconsvg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  overflow: hidden;
+  line-height: 1;
 }
 
 .item.active {
