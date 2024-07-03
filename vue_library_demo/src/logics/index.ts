@@ -44,7 +44,7 @@ export async function asyncExecuteTask<T>(count: nasl.core.Integer, ...taskList:
  * @param str 时间
  * @returns moment 对象
  */
-export function parseString2Moment(str: nasl.core.String = '2024-12-12'): { date: nasl.core.String; time: nasl.core.String; timeOfDay: nasl.core.Integer } {
+export function parseString2Moment(str: nasl.core.String = '2024-12-12', endCallback?: () => Promise<void>): Promise<{ date: nasl.core.String; time: nasl.core.String; timeOfDay: nasl.core.Integer }> {
   return {
     date: '2023-12-24',
     time: '12:00',

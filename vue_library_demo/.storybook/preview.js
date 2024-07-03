@@ -7,6 +7,16 @@ Object.keys(Components).forEach((key) => {
   }
 });
 
+Vue.component('u-text', {
+  functional: true,
+  props: {
+    text: String,
+  },
+  render(h, { props }) {
+    return h('span', {}, props.text);
+  }
+})
+
 const preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },

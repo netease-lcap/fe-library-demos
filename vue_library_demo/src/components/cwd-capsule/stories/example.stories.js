@@ -20,5 +20,9 @@ export const Example1 = {
   }),
   args: {
     text: 'Hello world',
+    testIcon: 'xinxi_info',
+    dataSource: () => {
+      return [{ label: "月销售统计", value: "month"},{ label: "年销售统计", value: "year"},{ label: "哈哈哈", value: "hhh"}];
+    }
   },
 };

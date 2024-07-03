@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@nasl/ast-mini": "3.9.0-beta"
+	}
+}
