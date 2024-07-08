@@ -15,12 +15,15 @@
       </div>
     </div>
     <slot></slot>
+    <span style="margin-left: 12px;">I18N 文案: {{ transformI18N('cwd-capsule.text')  }}</span>
   </div>
 </template>
 
 <script>
-import '../../../ide/icons/icon-font.js';
 import { at } from 'lodash';
+import ZH_CN from './i18n/zh-CN.json';
+import '../../../ide/icons/icon-font.js';
+
 export default {
   name: "cwd-capsule",
   props: {
@@ -67,6 +70,17 @@ export default {
     }
   },
   methods: {
+    transformI18N(key) {
+      // 获取当前语言环境
+      const locale = window.$global?.i18nInfo?.locale || 'zh-CN';
+      // 获取配置文案
+      const messages = window.$global?.i18nInfo?.messages;
+      if (!messages || !messages[locale] || !messages[locale][key]) {
+        return ZH_CN[key];
+      }
+
+      return messages[locale][key];
+    },
     getProp(item, propName) {
       return at(item, propName)[0];
     },
